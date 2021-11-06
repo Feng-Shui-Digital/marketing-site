@@ -21,17 +21,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        {/* <Script src="js/jquery-2.1.0.min.js" />
+        <Script src="js/jquery-2.1.0.min.js" />
 
         <Script src="js/popper.js" />
         <Script src="js/bootstrap.min.js" />
 
-        <Script src="js/scrollreveal.min.js" /> */}
-        {/* <Script src="js/waypoints.min.js" /> */}
-        {/* <Script src="js/jquery.counterup.min.js" />
+        <Script src="js/scrollreveal.min.js" />
+        <Script src="js/waypoints.min.js" />
+        <Script src="js/jquery.counterup.min.js" />
         <Script src="js/imgfix.min.js" />
 
-        <Script src="js/custom.js" /> */}
+        <Script src="js/custom.js" />
         <Main />
       </main>
     </>

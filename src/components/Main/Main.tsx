@@ -22,13 +22,13 @@ export default function Main() {
   const date = new Date();
   return (
     <>
-      {/* <div id="preloader">
+      <div id="preloader">
         <div className="jumper">
           <div></div>
           <div></div>
           <div></div>
         </div>
-      </div> */}
+      </div>
       <header className="header-area header-sticky">
         <div className="container">
           <div className="row">
