@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import cx from "classnames";
 // import { Contact, Navbar } from "..";
 // import { prefix } from "../../lib/prefix";
 // // import {
@@ -18,10 +19,24 @@ import styled from "styled-components";
 // } from "../Icons";
 import { prefix } from "../../lib/prefix";
 
+type NavListProps = {
+  menuOpen: boolean;
+};
+
 export default function Main() {
+  const [showContent, setShowContent] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowContent(true);
+    }, 800);
+  }, []);
+
   const date = new Date();
-  return (
-    <>
+
+  if (!showContent) {
+    return (
       <div id="preloader">
         <div className="jumper">
           <div></div>
@@ -29,6 +44,11 @@ export default function Main() {
           <div></div>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <>
       <header className="header-area header-sticky">
         <div className="container">
           <div className="row">
@@ -38,15 +58,19 @@ export default function Main() {
                   <Logo href="#" className="logo">
                     <img src={`${prefix}/fsd-logo.png`} alt="Softy Pinko" />
                   </Logo>
-                  <a className="menu-trigger">
+                  <a
+                    className={cx("menu-trigger", menuOpen && "active")}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                  >
                     <span>Menu</span>
                   </a>
                 </NavRow>
-                <ul className="nav">
+                <NavList
+                  className={cx("nav", menuOpen && "active")}
+                  menuOpen={menuOpen}
+                >
                   <li>
-                    <a href="#welcome" className="active">
-                      Home
-                    </a>
+                    <a href="#welcome">Home</a>
                   </li>
                   <li>
                     <a href="#features">About</a>
@@ -66,7 +90,7 @@ export default function Main() {
                   <li>
                     <a href="#contact-us">Contact Us</a>
                   </li>
-                </ul>
+                </NavList>
               </Nav>
             </div>
           </div>
@@ -789,4 +813,8 @@ const Logo = styled.a`
     position: relative;
     top: 0;
   }
+`;
+
+const NavList = styled.ul<NavListProps>`
+  display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
 `;

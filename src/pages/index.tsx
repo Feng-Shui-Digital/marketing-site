@@ -27,11 +27,11 @@ const Home: NextPage = () => {
         <Script src="js/bootstrap.min.js" />
 
         <Script src="js/scrollreveal.min.js" />
-        <Script src="js/waypoints.min.js" />
+        {/* <Script src="js/waypoints.min.js" /> */}
         <Script src="js/jquery.counterup.min.js" />
         <Script src="js/imgfix.min.js" />
 
-        <Script src="js/custom.js" />
+        {/* <Script src="js/custom.js" /> */}
         <Main />
       </main>
     </>
