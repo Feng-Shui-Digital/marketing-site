@@ -35,7 +35,7 @@ export default function Main() {
             <div className="col-12">
               <nav className="main-nav">
                 <a href="#" className="logo">
-                  <img src="assets/images/logo.png" alt="Softy Pinko" />
+                  <img src={`${prefix}/logo.png`} alt="Softy Pinko" />
                 </a>
 
                 <ul className="nav">
@@ -108,7 +108,7 @@ export default function Main() {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img src="assets/images/featured-item-01.png" alt="" />
+                        <img src={`${prefix}/featured-item-01.png`} alt="" />
                       </i>
                     </div>
                     <h5 className="features-title">Modern Strategy</h5>
@@ -125,7 +125,7 @@ export default function Main() {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img src="assets/images/featured-item-01.png" alt="" />
+                        <img src={`${prefix}/featured-item-01.png`} alt="" />
                       </i>
                     </div>
                     <h5 className="features-title">Best Relationship</h5>
@@ -139,7 +139,7 @@ export default function Main() {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img src="assets/images/featured-item-01.png" alt="" />
+                        <img src={`${prefix}/featured-item-01.png`} alt="" />
                       </i>
                     </div>
                     <h5 className="features-title">Ultimate Marketing</h5>
@@ -165,7 +165,7 @@ export default function Main() {
               data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
             >
               <img
-                src="assets/images/left-image.png"
+                src={`${prefix}/left-image.png`}
                 className="rounded img-fluid d-block mx-auto"
                 alt="App"
               />
@@ -217,7 +217,7 @@ export default function Main() {
               data-scroll-reveal="enter right move 30px over 0.6s after 0.4s"
             >
               <img
-                src="assets/images/right-image.png"
+                src={`${prefix}/right-image.png`}
                 className="rounded img-fluid d-block mx-auto"
                 alt="App"
               />
@@ -243,7 +243,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src="assets/images/work-process-item-01.png" alt="" />
+                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>Get Ideas</strong>
                   <span>Godard pabst prism fam cliche.</span>
@@ -252,7 +252,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src="assets/images/work-process-item-01.png" alt="" />
+                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>Sketch Up</strong>
                   <span>Godard pabst prism fam cliche.</span>
@@ -261,7 +261,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src="assets/images/work-process-item-01.png" alt="" />
+                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>Discuss</strong>
                   <span>Godard pabst prism fam cliche.</span>
@@ -270,7 +270,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src="assets/images/work-process-item-01.png" alt="" />
+                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>Revise</strong>
                   <span>Godard pabst prism fam cliche.</span>
@@ -279,7 +279,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src="assets/images/work-process-item-01.png" alt="" />
+                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>Approve</strong>
                   <span>Godard pabst prism fam cliche.</span>
@@ -288,7 +288,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src="assets/images/work-process-item-01.png" alt="" />
+                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>Launch</strong>
                   <span>Godard pabst prism fam cliche.</span>
@@ -321,7 +321,7 @@ export default function Main() {
               <div className="team-item">
                 <div className="team-content">
                   <i>
-                    <img src="assets/images/testimonial-icon.png" alt="" />
+                    <img src={`${prefix}/testimonial-icon.png`} alt="" />
                   </i>
                   <p>
                     Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis,
@@ -341,7 +341,7 @@ export default function Main() {
               <div className="team-item">
                 <div className="team-content">
                   <i>
-                    <img src="assets/images/testimonial-icon.png" alt="" />
+                    <img src={`${prefix}/testimonial-icon.png`} alt="" />
                   </i>
                   <p>
                     Integer molestie aliquam gravida. Nullam nec arcu finibus,
@@ -362,7 +362,7 @@ export default function Main() {
               <div className="team-item">
                 <div className="team-content">
                   <i>
-                    <img src="assets/images/testimonial-icon.png" alt="" />
+                    <img src={`${prefix}/testimonial-icon.png`} alt="" />
                   </i>
                   <p>
                     Quisque diam odio, maximus ac consectetur eu, auctor non
@@ -547,7 +547,7 @@ export default function Main() {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="blog-post-thumb">
                 <div className="img">
-                  <img src="assets/images/blog-item-01.png" alt="" />
+                  <img src={`${prefix}/blog-item-01.png`} alt="" />
                 </div>
                 <div className="blog-content">
                   <h3>
@@ -567,7 +567,7 @@ export default function Main() {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="blog-post-thumb">
                 <div className="img">
-                  <img src="assets/images/blog-item-02.png" alt="" />
+                  <img src={`${prefix}/blog-item-02.png`} alt="" />
                 </div>
                 <div className="blog-content">
                   <h3>
@@ -587,7 +587,7 @@ export default function Main() {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="blog-post-thumb">
                 <div className="img">
-                  <img src="assets/images/blog-item-03.png" alt="" />
+                  <img src={`${prefix}/blog-item-03.png`} alt="" />
                 </div>
                 <div className="blog-content">
                   <h3>
@@ -697,7 +697,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <footer>
+      <Footer>
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
@@ -738,7 +738,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </footer>
+      </Footer>
     </>
   );
 }
@@ -753,5 +753,9 @@ const Welcome = styled.div`
   background-position: center center;
   background-size: cover;
   height: 100vh;
+  width: 100%;
+`;
+
+const Footer = styled.footer`
   width: 100%;
 `;
