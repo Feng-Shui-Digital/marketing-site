@@ -33,11 +33,15 @@ export default function Main() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <nav className="main-nav">
-                <a href="#" className="logo">
-                  <img src={`${prefix}/logo.png`} alt="Softy Pinko" />
-                </a>
-
+              <Nav className="main-nav">
+                <NavRow>
+                  <Logo href="#" className="logo">
+                    <img src={`${prefix}/fsd-logo.png`} alt="Softy Pinko" />
+                  </Logo>
+                  <a className="menu-trigger">
+                    <span>Menu</span>
+                  </a>
+                </NavRow>
                 <ul className="nav">
                   <li>
                     <a href="#welcome" className="active">
@@ -63,10 +67,7 @@ export default function Main() {
                     <a href="#contact-us">Contact Us</a>
                   </li>
                 </ul>
-                <a className="menu-trigger">
-                  <span>Menu</span>
-                </a>
-              </nav>
+              </Nav>
             </div>
           </div>
         </div>
@@ -758,4 +759,34 @@ const Welcome = styled.div`
 
 const Footer = styled.footer`
   width: 100%;
+`;
+
+const NavRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+
+  @media screen and (min-width: 977px) {
+    width: auto;
+  }
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 977px) {
+    flex-direction: row;
+  }
+`;
+
+const Logo = styled.a`
+  position: absolute;
+  top: 21px;
+
+  @media screen and (min-width: 977px) {
+    position: relative;
+    top: 0;
+  }
 `;

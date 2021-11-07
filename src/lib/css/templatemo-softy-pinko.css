@@ -461,27 +461,30 @@ header
   background: #fff;
 }
 
-.header-area .main-nav .logo {
+.header-area .main-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
   float: left;
-  margin-top: 37px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  margin-left: 30px;
 }
 
 .header-area .main-nav .logo img {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
+  margin-left: 15px;
   transition: all 0.3s ease 0s;
+  width: 100px;
 }
 
 .header-area .main-nav .nav {
   float: right;
-  margin-top: 27px;
-  margin-left: 0px;
+  /* margin-top: 27px; */
+  margin-left: auto;
   margin-right: 30px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -615,13 +618,13 @@ header
   min-height: 80px;
 }
 
-.header-area.header-sticky .logo {
+.header-area.header-sticky {
   margin-top: 25px;
 }
 
-.header-area.header-sticky .nav {
+/* .header-area.header-sticky .nav {
   margin-top: 20px !important;
-}
+} */
 
 .header-area.header-sticky .nav li a {
   color: #1e1e1e;
@@ -651,9 +654,8 @@ header
   .header-area .container {
     padding: 0px;
   }
-  .header-area .logo {
+  .header-area {
     margin-top: 27px !important;
-    margin-left: 30px;
   }
   .header-area .menu-trigger {
     display: block !important;
