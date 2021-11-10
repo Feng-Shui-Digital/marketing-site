@@ -18,6 +18,7 @@ import cx from "classnames";
 //   TextShield,
 // } from "../Icons";
 import { prefix } from "../../lib/prefix";
+import { Contact } from "../Contact";
 
 type NavListProps = {
   menuOpen: boolean;
@@ -30,7 +31,7 @@ export default function Main() {
   useEffect(() => {
     setTimeout(() => {
       setShowContent(true);
-    }, 800);
+    }, 1500);
   }, []);
 
   const date = new Date();
@@ -81,12 +82,12 @@ export default function Main() {
                   <li>
                     <a href="#testimonials">Testimonials</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#pricing-plans">Pricing Tables</a>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <a href="#blog">Blog Entries</a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="#contact-us">Contact Us</a>
                   </li>
@@ -102,22 +103,20 @@ export default function Main() {
       >
         <div className="header-text">
           <div className="container">
-            <div className="row">
-              <div className="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                <h1>
-                  We provide the best <strong>strategy</strong>
-                  <br />
-                  to grow up your <strong>business</strong>
-                </h1>
-                <p>
-                  Softy Pinko is a professional Bootstrap 4.0 theme designed by
-                  Template Mo for your company at absolutely free of charge
-                </p>
-                <a href="#features" className="main-button-slider">
-                  Discover More
-                </a>
+            <HeroRow className="row">
+              <div className="col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                <h1>Transforming ideas into reality</h1>
+                <SubHeroText>
+                  Product development, UX design, and IT consulting for
+                  companies of all shapes and sizes
+                </SubHeroText>
+                <DiscoverButton>
+                  <a href="#features" className="main-button-slider">
+                    Discover More
+                  </a>
+                </DiscoverButton>
               </div>
-            </div>
+            </HeroRow>
           </div>
         </div>
       </Welcome>
@@ -136,25 +135,10 @@ export default function Main() {
                         <img src={`${prefix}/featured-item-01.png`} alt="" />
                       </i>
                     </div>
-                    <h5 className="features-title">Modern Strategy</h5>
+                    <h5 className="features-title">WEB APPS</h5>
                     <p>
-                      Customize anything in this template to fit your website
-                      needs
+                      Applications that scale with increased traffic and storage
                     </p>
-                  </div>
-                </div>
-                <div
-                  className="col-lg-4 col-md-6 col-sm-6 col-12"
-                  data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s"
-                >
-                  <div className="features-small-item">
-                    <div className="icon">
-                      <i>
-                        <img src={`${prefix}/featured-item-01.png`} alt="" />
-                      </i>
-                    </div>
-                    <h5 className="features-title">Best Relationship</h5>
-                    <p>Contact us immediately if you have a question in mind</p>
                   </div>
                 </div>
                 <div
@@ -167,10 +151,27 @@ export default function Main() {
                         <img src={`${prefix}/featured-item-01.png`} alt="" />
                       </i>
                     </div>
-                    <h5 className="features-title">Ultimate Marketing</h5>
+                    <h5 className="features-title">MOBILE APPS</h5>
                     <p>
-                      You just need to tell your friends about our free
-                      templates
+                      Feature parity and seemless UX across both Android and iOS
+                      devices
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col-lg-4 col-md-6 col-sm-6 col-12"
+                  data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s"
+                >
+                  <div className="features-small-item">
+                    <div className="icon">
+                      <i>
+                        <img src={`${prefix}/featured-item-01.png`} alt="" />
+                      </i>
+                    </div>
+                    <h5 className="features-title">DECENTRALIZED APPS</h5>
+                    <p>
+                      Bridging the gap between Web2 and Web3 with a myriad of
+                      technologies
                     </p>
                   </div>
                 </div>
@@ -198,15 +199,13 @@ export default function Main() {
             <div className="col-lg-1"></div>
             <div className="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
               <div className="left-heading">
-                <h2 className="section-title">
-                  Let’s discuss about you project
-                </h2>
+                <h2 className="section-title">Crafted With Design In Mind</h2>
               </div>
               <div className="left-text">
                 <p>
-                  Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue
-                  blandit, at finibus leo efficitur. Nam gravida purus non
-                  sapien auctor, ut aliquam magna ullamcorper.
+                  We at FSD believe that great software stems from solid design.
+                  User interfaces should flow sensibly and APIs should scale
+                  gracefully.
                 </p>
               </div>
             </div>
@@ -223,16 +222,12 @@ export default function Main() {
           <div className="row">
             <div className="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
               <div className="left-heading">
-                <h2 className="section-title">
-                  We can help you to grow your business
-                </h2>
+                <h2 className="section-title">Rooted In Process</h2>
               </div>
               <div className="left-text">
                 <p>
-                  Aenean pretium, ipsum et porttitor auctor, metus ipsum iaculis
-                  nisi, a bibendum lectus libero vitae urna. Sed id leo eu dolor
-                  luctus congue sed eget ipsum. Nunc nec luctus libero. Etiam
-                  quis dolor elit.
+                  Process is our backbone, which includes discovery, research,
+                  design, development, testing, and deployment.
                 </p>
               </div>
             </div>
@@ -250,16 +245,16 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section className="mini" id="work-process">
+      <section className="section mini colored" id="work-process">
         <div className="mini-content">
           <div className="container">
             <div className="row">
               <div className="offset-lg-3 col-lg-6">
                 <div className="info">
-                  <h1>Work Process</h1>
+                  <h1>Our Specialties</h1>
                   <p>
-                    Aenean nec tempor metus. Maecenas ligula dolor, commodo in
-                    imperdiet interdum, vehicula ut ex. Donec ante diam.
+                    Take your product to the next level with our assorted web
+                    expertise
                   </p>
                 </div>
               </div>
@@ -270,8 +265,8 @@ export default function Main() {
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
-                  <strong>Get Ideas</strong>
-                  <span>Godard pabst prism fam cliche.</span>
+                  <strong>UI Development</strong>
+                  {/* <span>Define project scope</span> */}
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
@@ -279,8 +274,8 @@ export default function Main() {
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
-                  <strong>Sketch Up</strong>
-                  <span>Godard pabst prism fam cliche.</span>
+                  <strong>Web Development</strong>
+                  {/* <span>Detect industry standards</span> */}
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
@@ -288,8 +283,8 @@ export default function Main() {
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
-                  <strong>Discuss</strong>
-                  <span>Godard pabst prism fam cliche.</span>
+                  <strong>API Development</strong>
+                  {/* <span>Planning and strategization</span> */}
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
@@ -297,8 +292,8 @@ export default function Main() {
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
-                  <strong>Revise</strong>
-                  <span>Godard pabst prism fam cliche.</span>
+                  <strong>Application Security</strong>
+                  {/* <span>Bring your concept to life</span> */}
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
@@ -306,8 +301,8 @@ export default function Main() {
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
-                  <strong>Approve</strong>
-                  <span>Godard pabst prism fam cliche.</span>
+                  <strong>Devops & Cloud</strong>
+                  {/* <span>Ensure quality across environments</span> */}
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
@@ -315,8 +310,8 @@ export default function Main() {
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
-                  <strong>Launch</strong>
-                  <span>Godard pabst prism fam cliche.</span>
+                  <strong>dApp Development</strong>
+                  {/* <span>Launch product and go live</span> */}
                 </a>
               </div>
             </div>
@@ -328,16 +323,18 @@ export default function Main() {
           <div className="row">
             <div className="col-lg-12">
               <div className="center-heading">
-                <h2 className="section-title">What do they say?</h2>
+                <h2 className="section-title">
+                  Proven custom software development agency
+                </h2>
               </div>
             </div>
             <div className="offset-lg-3 col-lg-6">
               <div className="center-text">
-                <p>
+                {/* <p>
                   Donec tempus, sem non rutrum imperdiet, lectus orci fringilla
                   nulla, at accumsan elit eros a turpis. Ut sagittis lectus
                   libero.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -407,7 +404,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section className="section colored" id="pricing-plans">
+      {/* <section className="section colored" id="pricing-plans">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -517,8 +514,8 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="counter">
+      </section> */}
+      {/* <section className="counter">
         <div className="content">
           <div className="container">
             <div className="row">
@@ -549,8 +546,8 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="section" id="blog">
+      </section> */}
+      {/* <section className="section" id="blog">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -631,97 +628,8 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="section colored" id="contact-us">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="center-heading">
-                <h2 className="section-title">Talk To Us</h2>
-              </div>
-            </div>
-            <div className="offset-lg-3 col-lg-6">
-              <div className="center-text">
-                <p>
-                  Maecenas pellentesque ante faucibus lectus vulputate
-                  sollicitudin. Cras feugiat hendrerit semper.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <h5 className="margin-bottom-30">Keep in touch</h5>
-              <div className="contact-text">
-                <p>
-                  110-220 Quisque diam odio, maximus ac consectetur eu, 10260
-                  <br />
-                  auctor non lorem
-                </p>
-                <p>
-                  You are NOT allowed to re-distribute Softy Pinko template on
-                  any template collection websites. Thank you.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-8 col-md-6 col-sm-12">
-              <div className="contact-form">
-                <form id="contact" action="" method="get">
-                  <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          className="form-control"
-                          id="name"
-                          placeholder="Full Name"
-                          required
-                        />
-                      </fieldset>
-                    </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="email"
-                          className="form-control"
-                          id="email"
-                          placeholder="E-Mail Address"
-                          required
-                        />
-                      </fieldset>
-                    </div>
-                    <div className="col-lg-12">
-                      <fieldset>
-                        <textarea
-                          name="message"
-                          rows={6}
-                          className="form-control"
-                          id="message"
-                          placeholder="Your Message"
-                          required
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div className="col-lg-12">
-                      <fieldset>
-                        <button
-                          type="submit"
-                          id="form-submit"
-                          className="main-button"
-                        >
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */}
+      <Contact />
       <Footer>
         <div className="container">
           <div className="row">
@@ -817,4 +725,18 @@ const Logo = styled.a`
 
 const NavList = styled.ul<NavListProps>`
   display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
+`;
+
+const DiscoverButton = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+`;
+
+const SubHeroText = styled.p`
+  padding-top: 10px;
+`;
+
+const HeroRow = styled.div`
+  justify-content: center;
 `;

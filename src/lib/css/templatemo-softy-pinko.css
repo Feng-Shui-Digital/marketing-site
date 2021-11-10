@@ -957,7 +957,7 @@ parallax & home seperator
 }
 
 .mini .mini-content .info h1 {
-  color: #fff;
+  color: black;
   font-weight: 500;
   font-size: 28px;
   letter-spacing: 0.25px;
@@ -967,7 +967,7 @@ parallax & home seperator
 .mini .mini-content .info p {
   letter-spacing: 1px;
   margin-bottom: 40px;
-  color: #fff;
+  color: black;
   letter-spacing: 0.25px;
   line-height: 26px;
   font-weight: 400;
@@ -1116,7 +1116,7 @@ parallax & home seperator
   font-size: 36px;
   letter-spacing: 0.25px;
   margin-bottom: 10px;
-  color: #fff;
+  color: black;
   margin-top: 120px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
