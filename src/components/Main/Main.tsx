@@ -353,7 +353,7 @@ export default function Main() {
                     egestas scelerisque orci. Maecenas a finibus odio.
                   </p>
                   <div className="user-image">
-                    <img src="http://placehold.it/60x60" alt="" />
+                    <img src="https://placehold.it/60x60" alt="" />
                   </div>
                   <div className="team-info">
                     <h3 className="user-name">Catherine Soft</h3>
@@ -374,7 +374,7 @@ export default function Main() {
                     molestie.
                   </p>
                   <div className="user-image">
-                    <img src="http://placehold.it/60x60" alt="" />
+                    <img src="https://placehold.it/60x60" alt="" />
                   </div>
                   <div className="team-info">
                     <h3 className="user-name">Kelvin Wood</h3>
@@ -395,7 +395,7 @@ export default function Main() {
                     et diam at aliquam.
                   </p>
                   <div className="user-image">
-                    <img src="http://placehold.it/60x60" alt="" />
+                    <img src="https://placehold.it/60x60" alt="" />
                   </div>
                   <div className="team-info">
                     <h3 className="user-name">David Martin</h3>
