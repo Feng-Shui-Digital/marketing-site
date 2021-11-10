@@ -160,7 +160,7 @@ export default function Contact({}) {
                         type="submit"
                         id="form-submit"
                         className="main-button"
-                        disabled={isLoading}
+                        disabled={true}
                       >
                         Send Message
                       </button>
