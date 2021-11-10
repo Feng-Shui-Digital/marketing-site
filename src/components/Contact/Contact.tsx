@@ -88,7 +88,7 @@ export default function Contact({}) {
         <div className="row">
           <div className="col-lg-12">
             <div className="center-heading">
-              <h2 className="section-title">Let's Connect</h2>
+              <h2 className="section-title">Let&apos;s Connect</h2>
             </div>
           </div>
           <div className="offset-lg-3 col-lg-6">
