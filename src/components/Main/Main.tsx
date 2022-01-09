@@ -6,17 +6,7 @@ import styled from "styled-components";
 import cx from "classnames";
 // import { Contact, Navbar } from "..";
 // import { prefix } from "../../lib/prefix";
-// // import {
-//   CloudHand,
-//   DatabaseCash,
-//   Diamond,
-//   DonationHeart,
-//   EarthShare,
-//   MoneyBag,
-//   Presentation,
-//   TeamChat,
-//   TextShield,
-// } from "../Icons";
+import { Bitcoin, CloudStar, Shield, Web } from "../Icons";
 import { prefix } from "../../lib/prefix";
 import { Contact } from "../Contact";
 
@@ -70,9 +60,6 @@ export default function Main() {
                   className={cx("nav", menuOpen && "active")}
                   menuOpen={menuOpen}
                 >
-                  <li>
-                    <a href="#welcome">Home</a>
-                  </li>
                   <li>
                     <a href="#features">About</a>
                   </li>
@@ -259,38 +246,38 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-2 col-md-3 col-sm-6 col-6">
+            <SpecialtyRow className="row">
+              {/* <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>UI Development</strong>
-                  {/* <span>Define project scope</span> */}
+                  <span>Define project scope</span>
                 </a>
-              </div>
+              </div> */}
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
+                    <CloudStar />
                   </i>
                   <strong>Web Development</strong>
                   {/* <span>Detect industry standards</span> */}
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6 col-6">
+              {/* <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
                   <strong>API Development</strong>
-                  {/* <span>Planning and strategization</span> */}
+                  <span>Planning and strategization</span>
                 </a>
-              </div>
+              </div> */}
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
+                    <Web />
                   </i>
                   <strong>Application Security</strong>
                   {/* <span>Bring your concept to life</span> */}
@@ -299,7 +286,7 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
+                    <Shield />
                   </i>
                   <strong>Devops & Cloud</strong>
                   {/* <span>Ensure quality across environments</span> */}
@@ -308,13 +295,13 @@ export default function Main() {
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <a href="#" className="mini-box">
                   <i>
-                    <img src={`${prefix}/work-process-item-01.png`} alt="" />
+                    <Bitcoin />
                   </i>
                   <strong>dApp Development</strong>
                   {/* <span>Launch product and go live</span> */}
                 </a>
               </div>
-            </div>
+            </SpecialtyRow>
           </div>
         </div>
       </section>
@@ -346,14 +333,15 @@ export default function Main() {
                     <img src={`${prefix}/testimonial-icon.png`} alt="" />
                   </i>
                   <p>
-                    Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis,
-                    egestas scelerisque orci. Maecenas a finibus odio.
+                    FSD checked all the boxes for us. From idea inception to
+                    delivery, they worked with diligence, transparency, and
+                    professionalism to bring our application to life.
                   </p>
                   <div className="user-image">
                     <img src="http://placehold.it/60x60" alt="" />
                   </div>
                   <div className="team-info">
-                    <h3 className="user-name">Catherine Soft</h3>
+                    <h3 className="user-name">Colin McCaleb</h3>
                     <span>Managing Director</span>
                   </div>
                 </div>
@@ -366,16 +354,17 @@ export default function Main() {
                     <img src={`${prefix}/testimonial-icon.png`} alt="" />
                   </i>
                   <p>
-                    Integer molestie aliquam gravida. Nullam nec arcu finibus,
-                    imperdiet nulla vitae, placerat nibh. Cras maximus venenatis
-                    molestie.
+                    FSD was able to take the helm on our company website and
+                    knock it out of the park. We are very pleased with how it
+                    turned out and will turn to them for more software solutions
+                    in the future.
                   </p>
                   <div className="user-image">
                     <img src="http://placehold.it/60x60" alt="" />
                   </div>
                   <div className="team-info">
-                    <h3 className="user-name">Kelvin Wood</h3>
-                    <span>Digital Marketer</span>
+                    <h3 className="user-name">Grant Williams</h3>
+                    <span>Entrepreneur</span>
                   </div>
                 </div>
               </div>
@@ -387,16 +376,17 @@ export default function Main() {
                     <img src={`${prefix}/testimonial-icon.png`} alt="" />
                   </i>
                   <p>
-                    Quisque diam odio, maximus ac consectetur eu, auctor non
-                    lorem. Cras quis est non ante ultrices molestie. Ut vehicula
-                    et diam at aliquam.
+                    We were extremely pleased with the level of effort FSD put
+                    into designing, building, and testing our ERP platform. They
+                    finished ahead of schedule and were instrumental in our
+                    company's growing market share in the cannabis industry.
                   </p>
                   <div className="user-image">
                     <img src="http://placehold.it/60x60" alt="" />
                   </div>
                   <div className="team-info">
-                    <h3 className="user-name">David Martin</h3>
-                    <span>Website Manager</span>
+                    <h3 className="user-name">Brian Larsen</h3>
+                    <span>COO</span>
                   </div>
                 </div>
               </div>
@@ -738,5 +728,9 @@ const SubHeroText = styled.p`
 `;
 
 const HeroRow = styled.div`
+  justify-content: center;
+`;
+
+const SpecialtyRow = styled.div`
   justify-content: center;
 `;
