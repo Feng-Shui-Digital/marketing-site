@@ -265,7 +265,7 @@ export default function Main() {
                 </a>
               </div> */}
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
-                <a href="#" className="mini-box">
+                <a className="mini-box">
                   <i>
                     <CloudStar />
                   </i>
@@ -274,7 +274,7 @@ export default function Main() {
                 </a>
               </div>
               {/* <div className="col-lg-2 col-md-3 col-sm-6 col-6">
-                <a href="#" className="mini-box">
+                <a  className="mini-box">
                   <i>
                     <img src={`${prefix}/work-process-item-01.png`} alt="" />
                   </i>
@@ -283,7 +283,7 @@ export default function Main() {
                 </a>
               </div> */}
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
-                <a href="#" className="mini-box">
+                <a className="mini-box">
                   <i>
                     <Web />
                   </i>
@@ -292,7 +292,7 @@ export default function Main() {
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
-                <a href="#" className="mini-box">
+                <a className="mini-box">
                   <i>
                     <Shield />
                   </i>
@@ -301,7 +301,7 @@ export default function Main() {
                 </a>
               </div>
               <div className="col-lg-2 col-md-3 col-sm-6 col-6">
-                <a href="#" className="mini-box">
+                <a className="mini-box">
                   <i>
                     <Bitcoin />
                   </i>
