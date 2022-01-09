@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import styled from "styled-components";
 import validate, { EMAIL, MAX_LENGTH, MIN_LENGTH, REQUIRED } from "verdad-js";
 
 type FormData = {
@@ -39,29 +40,37 @@ const config = {
 
 export default function Contact({}) {
   const [errors, setErrors] = useState(initialErrorState);
-  const [valid, setIsValid] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [errorsPresent, setErrorsPresent] = useState<boolean>(false);
 
   const onSubmit = (e: any) => {
     e.preventDefault();
     setIsLoading(true);
 
     const data = {
-      [NAME]: e.target[0].value,
-      [EMAIL]: e.target[1].value,
-      [MESSAGE]: e.target[2].value,
+      [NAME]: name,
+      [EMAIL]: email,
+      [MESSAGE]: message,
     };
 
     const { valid, errorState } = validate(data, config);
     if (!valid) {
       setErrors(errorState);
       setIsLoading(false);
-      return setIsValid(false);
+      return setErrorsPresent(true);
+    }
+
+    if (valid && errorsPresent) {
+      setErrorsPresent(false);
     }
 
     emailjs
       .sendForm(
-        "contact_service",
+        "service_3xximqo",
         "contact_form",
         e.target,
         "user_IyPdDHtYTG3DDGWOZKogS"
@@ -69,18 +78,17 @@ export default function Contact({}) {
       .then(
         (result) => {
           console.log(result.text);
+          setHasSubmitted(true);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setIsLoading(false);
         },
         (error) => {
           console.log(error.text);
+          setIsLoading(false);
         }
       );
-
-    if (!valid) {
-      setIsValid(true);
-      setErrors(initialErrorState);
-    }
-
-    setIsLoading(false);
   };
   return (
     <section className="section colored" id="contact-us">
@@ -117,10 +125,12 @@ export default function Contact({}) {
                         placeholder="Full Name"
                         required
                         name="user_name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </fieldset>
-                    {!valid && !!errors[NAME].length && (
-                      <span>{errors[NAME][0]}</span>
+                    {errorsPresent && !!errors[NAME].length && (
+                      <Error>{errors[NAME][0]}</Error>
                     )}
                   </div>
                   <div className="col-lg-6 col-md-12 col-sm-12">
@@ -132,9 +142,11 @@ export default function Contact({}) {
                         placeholder="Email"
                         required
                         name="user_email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
-                      {!valid && !!errors[EMAIL].length && (
-                        <span>{errors[EMAIL][0]}</span>
+                      {errorsPresent && !!errors[EMAIL].length && (
+                        <Error>{errors[EMAIL][0]}</Error>
                       )}
                     </fieldset>
                   </div>
@@ -147,10 +159,12 @@ export default function Contact({}) {
                         id="message"
                         placeholder="Message"
                         maxLength={1000}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         required
                       ></textarea>
-                      {!valid && !!errors[MESSAGE].length && (
-                        <span>{errors[MESSAGE][0]}</span>
+                      {errorsPresent && !!errors[MESSAGE].length && (
+                        <Error>{errors[MESSAGE][0]}</Error>
                       )}
                     </fieldset>
                   </div>
@@ -160,9 +174,13 @@ export default function Contact({}) {
                         type="submit"
                         id="form-submit"
                         className="main-button"
-                        disabled={true}
+                        disabled={isLoading || hasSubmitted}
                       >
-                        Send Message
+                        {isLoading
+                          ? "Loading"
+                          : hasSubmitted
+                          ? "Submitted"
+                          : "Send"}
                       </button>
                     </fieldset>
                   </div>
@@ -175,3 +193,7 @@ export default function Contact({}) {
     </section>
   );
 }
+
+const Error = styled.span`
+  color: red;
+`;

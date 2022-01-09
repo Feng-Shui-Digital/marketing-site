@@ -6,7 +6,15 @@ import styled from "styled-components";
 import cx from "classnames";
 // import { Contact, Navbar } from "..";
 // import { prefix } from "../../lib/prefix";
-import { Bitcoin, CloudStar, Shield, Web } from "../Icons";
+import {
+  Bitcoin,
+  CloudStar,
+  Decentralized,
+  Laptop,
+  Phone,
+  Shield,
+  Web,
+} from "../Icons";
 import { prefix } from "../../lib/prefix";
 import { Contact } from "../Contact";
 
@@ -119,7 +127,7 @@ export default function Main() {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img src={`${prefix}/featured-item-01.png`} alt="" />
+                        <Laptop />
                       </i>
                     </div>
                     <h5 className="features-title">WEB APPS</h5>
@@ -135,7 +143,7 @@ export default function Main() {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img src={`${prefix}/featured-item-01.png`} alt="" />
+                        <Phone />
                       </i>
                     </div>
                     <h5 className="features-title">MOBILE APPS</h5>
@@ -152,7 +160,7 @@ export default function Main() {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img src={`${prefix}/featured-item-01.png`} alt="" />
+                        <Decentralized />
                       </i>
                     </div>
                     <h5 className="features-title">DECENTRALIZED APPS</h5>
@@ -625,7 +633,7 @@ export default function Main() {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <ul className="social">
-                <li>
+                {/* <li>
                   <a href="#">
                     <i className="fa fa-facebook"></i>
                   </a>
@@ -634,13 +642,13 @@ export default function Main() {
                   <a href="#">
                     <i className="fa fa-twitter"></i>
                   </a>
-                </li>
+                </li> */}
                 <li>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/company/feng-shui-digital">
                     <i className="fa fa-linkedin"></i>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">
                     <i className="fa fa-rss"></i>
                   </a>
@@ -649,7 +657,7 @@ export default function Main() {
                   <a href="#">
                     <i className="fa fa-dribbble"></i>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
